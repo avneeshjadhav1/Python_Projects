@@ -1,0 +1,21 @@
+#calculator - addition , subtraction , multiplication , division
+print("Calculator")
+print("----------")
+while True:
+  print("----------")
+  print("")
+  a, operation, b = input().split()
+  a = int(a)
+  b = int(b)
+  end_value = 0
+  if(operation == "+"):
+     end_value = a+b
+  elif(operation == "-"):
+     end_value = a-b
+  elif(operation == "*"):
+     end_value = a*b
+  elif(operation == "/"):
+     end_value = a/b
+  print("_________")  
+  print("")
+  print(end_value)
