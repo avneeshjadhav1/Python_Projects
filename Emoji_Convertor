@@ -1,0 +1,11 @@
+def emoji_c(words):
+    list1 = words.split(" ")
+    emoji = {":)": "☺️", ":(": "😞"}
+    output = ""
+    for i in list1:
+        output += emoji.get(i, i) + " "
+    return output
+
+
+Input_S = input("Enter a string: ")
+print(emoji_c(Input_S))
