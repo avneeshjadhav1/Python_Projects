@@ -1,0 +1,49 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'timeConversion' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING s as parameter.
+#
+
+def timeConversion(s):
+    #find whether AM or PM
+    l1 = s.split(":")
+    l2 = s.split(":")
+    if('AM' in s):
+        b = l1[2]
+        l1[2] = b.replace("AM","")
+        if(l1[0] == '12'):
+            l1[0] = '00'
+          
+        new_string = ":".join(l1)
+        
+        
+    if('PM' in s):
+        b = l2[2]
+        l2[2] = b.replace("PM","")
+        if(l2[0] == '12'):
+            pass
+        else:
+          hour = int(l2[0])
+          hour += 12
+          l2[0] = str(hour)
+          
+        new_string = ":".join(l2)
+        new_string.replace("PM","")
+      
+    return new_string
+        
+    
+s = input()
+
+result = timeConversion(s)
+
+print(result)
